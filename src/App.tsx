@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { LandingPage } from './pages/LandingPage';
 import { QuestionPage } from './pages/QuestionPage';
 import { ResultsPage } from './pages/ResultsPage';
@@ -66,6 +67,7 @@ function App() {
       {step === 'results' && (
         <ResultsPage questions={generatedQuestions} onRestart={handleRestart} />
       )}
+      <Analytics />
     </div>
   );
 }
